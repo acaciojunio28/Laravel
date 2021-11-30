@@ -14,9 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/','EventController@index');
 
-Route::get('/sobre',function(){
-    return "sobre nois";
-});
-Route::get('/contato',function(){
-    return "contato";
-});
+Route::get('/sobre','SobreNosController@sobrenos');
+
+Route::get('/contato','ContatoController@contato');
