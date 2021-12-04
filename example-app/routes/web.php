@@ -17,3 +17,7 @@ Route::get('/','EventController@index');
 Route::get('/sobre','SobreNosController@sobrenos');
 
 Route::get('/contato','ContatoController@contato');
+
+Route::get('/contato/{nome}',function($nome){
+    echo "meu nome e $nome";
+});
