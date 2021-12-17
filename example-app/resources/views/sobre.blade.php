@@ -1,1 +1,9 @@
-<h3>Sobre(view)</h3>
+@extends('layout.man')
+    
+@section('titulo','BDR')
+
+@section('conteudo')
+
+<h3>sobre(view)</h3>
+
+@endsection

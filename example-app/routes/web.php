@@ -18,6 +18,15 @@ Route::get('/sobre','SobreNosController@sobrenos');
 
 Route::get('/contato','ContatoController@contato');
 
-Route::get('/contato/{nome}',function($nome){
-    echo "meu nome e $nome";
+Route::prefix('/app')->group(function(){
+
+Route::get('/login',function(){return'login';});
+
+Route::get('/clientes',function(){return'clientes';});
+
+Route::get('/fornecedores',function(){return'fornrcedores';});
+
+Route::get('/produto',function(){return'produto';});
 });
+
+
