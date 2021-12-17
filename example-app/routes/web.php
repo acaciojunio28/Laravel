@@ -28,5 +28,10 @@ Route::get('/fornecedores',function(){return'fornrcedores';});
 
 Route::get('/produto',function(){return'produto';});
 });
+Route::get('/teste/{p1}/{p2}','TesteContrtoller@Teste');
+
+Route::fallback(function(){
+    echo "<h1> Pagina não Encontrada <h1>";
+});
 
 
