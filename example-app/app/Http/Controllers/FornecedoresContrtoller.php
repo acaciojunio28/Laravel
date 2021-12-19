@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 class FornecedoresContrtoller extends Controller
 {
  public function index(){
-     return view('fornecedores');
+$fornecedores=['fornecedores','fornecedores','fornecedores','fornecedores','fornecedores','fornecedores','fornecedores','fornecedores','fornecedores','fornecedores','fornecedores','fornecedores','fornecedores','fornecedores'];
+     return view('fornecedores',compact('fornecedores'));
  }
 }
+ 
