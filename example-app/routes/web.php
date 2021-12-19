@@ -24,7 +24,7 @@ Route::get('/login',function(){return'login';});
 
 Route::get('/clientes',function(){return'clientes';});
 
-Route::get('/fornecedores',function(){return'fornrcedores';});
+Route::get('/fornecedores','FornecedoresContrtoller@index');
 
 Route::get('/produto',function(){return'produto';});
 });
