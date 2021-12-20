@@ -21,3 +21,7 @@ opa op
     <h3>existe mais de 10 objeto cadastrado</h3> 
 
 @endif
+
+@unless(count($fornecedores)>0 && count($fornecedores)< 10)
+<h3>existe mais de 10 objeto cadastrado</h3> 
+@endunless
