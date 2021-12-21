@@ -8,6 +8,7 @@ use App\Models\Tarefa;
 class EventController extends Controller
 {
     public function index(){
-        $nome = "mateus";
-    return view('home',['nome' => $nome]);}
+        var_dump($_GET);
+
+    return view('home');}
 }
