@@ -4,7 +4,8 @@
 
 @section('conteudo')
 
-<form action="/" method="get">
+<form action="/" method="post">
+    @csrf
     <div>
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome"/>
