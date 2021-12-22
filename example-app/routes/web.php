@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::post('/','EventController@index');
+Route::get('/','EventController@index');
 
 Route::get('/sobre','SobreNosController@sobrenos');
 
