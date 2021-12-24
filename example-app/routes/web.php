@@ -12,8 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::post('/','EventController@index');
-Route::get('/','EventController@index');
+Route::post('/','EventController@store');
+Route::get('/','EventController@create');
 
 Route::get('/sobre','SobreNosController@sobrenos');
 

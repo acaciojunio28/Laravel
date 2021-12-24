@@ -3,12 +3,24 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Tarefa;
+
+use App\Models\HomeModel;
 
 class EventController extends Controller
 {
-    public function index(){
-        var_dump($_POST);
+    public function create(){
 
-    return view('home');}
+
+    return view('home');
+}
+    public function store(Request $request){
+
+ HomeModel::create([
+     'name'=>$request->nome,
+     'email'=>$request->email,
+     'msg'=>$request->msg,
+ ]);
+ return redirect('/')
+ ->with('success', 'Cadastrado com Sucesso');
+    }
 }
