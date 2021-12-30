@@ -20,13 +20,13 @@
   <div class="cotainer" id="conteudoNavbarSuportado">
     <ul class="navbar-nav mr-auto ">
       <li class="nav-item active">
-        <a class="nav-link text-white" href="/">home</a>
+        <a class="nav-link text-white" href="/">Cadastrar</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="/sobre">sobre</a>
+        <a class="nav-link text-white" href="/listar">Listar</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="/contato">contato</a>
+        <a class="nav-link text-white" href="/sair">Sair</a>
       </li>
     </ul>
   </div>

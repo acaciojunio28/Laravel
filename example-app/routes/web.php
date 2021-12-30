@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Middleware\LoginMiddlewere;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,16 +13,30 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::post('/','EventController@store');
-Route::get('/','EventController@create');
+
+Route::post('/','EventController@store')->middleware(LoginMiddlewere::class);
+
+Route::get('/','EventController@create')->middleware(LoginMiddlewere::class);
+
+Route::get('/listar','EventController@index')->middleware(LoginMiddlewere::class);
+
+Route::delete('/listar/{id}','EventController@destroy')->middleware(LoginMiddlewere::class);
+
+Route::get('/editar/{id}','EventController@show')->middleware(LoginMiddlewere::class);
+
+Route::put('/editar/update/{id}','EventController@update')->middleware(LoginMiddlewere::class);
+
+Route::get('/sair','SairController@sair')->middleware(LoginMiddlewere::class);
 
 Route::get('/sobre','SobreNosController@sobrenos');
 
 Route::get('/contato','ContatoController@contato');
 
-Route::prefix('/app')->group(function(){
+Route::get('/login','LoginController@index');
 
-Route::get('/login',function(){return'login';});
+Route::post('/login','LoginController@autenticar');
+
+Route::prefix('/app')->group(function(){
 
 Route::get('/clientes',function(){return'clientes';});
 
@@ -34,5 +49,3 @@ Route::get('/teste/{p1}/{p2}','TesteContrtoller@Teste');
 Route::fallback(function(){
     echo "<h1> Pagina não Encontrada <h1>";
 });
-
-

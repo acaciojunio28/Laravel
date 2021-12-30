@@ -8,27 +8,27 @@
             <p>{{ $message }}</p>
         </div>
 @endif
-<form action="/" method="post">
+
+<form action="/editar/update/{{$edit->id}}" method="POST">
     @csrf
+    @method('PUT')
     </div>
     <div>
     <div class="col-md-3">
         <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" class="form-control"/>
+        <input type="text" id="nome" name="name" value= "{{$edit->name}}"  class="form-control"/>
     </div>
     <div class="col-md-3">
         <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" class="form-control"/>
+        <input type="email" id="email" name="email" value= "{{$edit->email}}"class="form-control"/>
     </div>
     <div class="col-md-3">
         <label for="msg">Mensagem:</label>
-        <textarea id="msg" name="msg" class="form-control"></textarea>
+        <textarea id="msg" name="msg" class="form-control">{{$edit->msg}}</textarea>
     </div>
     <div class="mt-2 mb-3">
-    <input type="submit" value="Enviar" class="btn btn-success" />
+    <input type="submit" value="Editar" class="btn btn-success" />
     </div>
     </div>
 </form>
-
 @endsection
-
